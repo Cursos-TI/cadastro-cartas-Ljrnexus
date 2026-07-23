@@ -135,14 +135,19 @@ int  main () {
 
 //Comparativo das cartas
 
-  printf("\nComparação de Cartas: ");
-  printf("\nPopulação: Carta 1 venceu (%d)", resultado_populacao = população > população2);
-  printf("\nÁrea: Carta 1 venceu (%d)", resultado_area = area > area2);
-  printf("\nPIB: Carta 1 venceu (%d)", resultado_PIB = PIB > PIB2);
-  printf("\nPontos Turísticos: Carta 1 venceu (%d)", resultado_pontos_turisticos = pontos_turisticos > pontos_turisticos2);
-  printf("\nDensidade Populacional: Carta 1 venceu (%d)", resultado_densidade_populacional = densidade_populacional > densidade_populacional2);
-  printf("\nPIB per Capita: Carta 1 venceu (%d)", resultado_PIB_per_capita = PIB_per_capita > PIB_per_capita2);
-  printf("\nSuper Poder: Carta 1 venceu (%d)", resultado_superpoder = superpoder > superpoder2);
+  printf("\nComparação de Cartas: Atributo 'PIB per capita'\n");
+
+    printf("Carta 1: R$%.2f\n", PIB_per_capita);
+    printf("Carta 2: R$%.2f\n", PIB_per_capita2);
+
+    if (PIB_per_capita > PIB_per_capita2) {
+        printf("Resultado: Carta 1 tem maior PIB per capita: R$%.2f\n", PIB_per_capita);
+    } else if (PIB_per_capita < PIB_per_capita2) {
+        printf("Resultado: Carta 2 tem maior PIB per capita: R$%.2f\n", PIB_per_capita2);
+    } else {
+        printf("Resultado: As duas cartas têm o mesmo PIB per capita: R$%.2f\n", PIB_per_capita);
+    }
+
 
 return  0 ;
 }
